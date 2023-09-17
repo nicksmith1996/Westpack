@@ -23,7 +23,12 @@
     <scope>test</scope>
 </dependency>
 
-	  
+
+  	<dependency>
+  		<groupId>NicksWestpack</groupId>
+  		<artifactId>Selenium-Java</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
   </dependencies>
   
 </project>

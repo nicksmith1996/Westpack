@@ -4,12 +4,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class WPRetirePage {
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
 			//open Westpack Page
 		
 
 		System.out.println("pass");
-		System.setProperty("webdriver.chrome.driver", "\\Users\\user\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.westpac.co.nz/");
 		driver.findElement(By.partialLinkText("Calculators")).click();

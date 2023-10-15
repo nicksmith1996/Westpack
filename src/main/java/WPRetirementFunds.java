@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.JavascriptExecutor;
 
 import Users.User1;
 import Users.User2;
@@ -30,20 +31,24 @@ public static void main(String[] args) throws InterruptedException {
 			System.out.println("pass");
 		
 			WebDriver driver = new ChromeDriver();
+			JavascriptExecutor js =(JavascriptExecutor)driver;
 			
 		//Navigation
 			driver.get(Home.URL);
-			driver.findElement(By.partialLinkText("Calculators")).click();
-				Thread.sleep(2000);
 			driver.findElement(By.xpath(Calculators.Kiwisaver_calculator)).click();
+				Thread.sleep(2000);
+			js.executeScript("scroll(0, 860)");
+				Thread.sleep(500);
+			driver.findElement(By.xpath(Calculators.Check_contr)).click();
 				Thread.sleep(1000);
 			driver.findElement(By.className(Calculators.Open_calc)).click();
 				Thread.sleep(500);
 			driver.findElement(By.id(Age.Age_Label)).sendKeys(User1.age + Keys.ENTER);
 			//Retirement Button
-				driver.findElement(By.xpath(Retirement.Button)).click();
+			 	driver.findElement(By.xpath(Retirement.Button)).click();
 			//Employed	
 				driver.findElement(By.xpath(Employed.Feild)).click();
+				Thread.sleep(500);
 				driver.findElement(By.xpath(Employed.Employeed)).click();
 			//income
 				driver.findElement(By.id(Income.Feild)).sendKeys(User1.salary + Keys.ENTER);
@@ -59,10 +64,11 @@ public static void main(String[] args) throws InterruptedException {
 				driver.findElement(By.xpath(Fund.Defensive)).click();
 					Thread.sleep(5000);
 
-				//User 2
+					//User 2
 			driver.get(Home.URL);
 			driver.findElement(By.partialLinkText("Calculators")).click();
 				Thread.sleep(1000);
+				js.executeScript("scroll(0, 860)");
 			driver.findElement(By.xpath(Calculators.Kiwisaver_calculator)).click();
 				Thread.sleep(1000);
 			driver.findElement(By.className(Calculators.Open_calc)).click();
@@ -91,6 +97,7 @@ public static void main(String[] args) throws InterruptedException {
 			driver.get(Home.URL);
 			driver.findElement(By.partialLinkText("Calculators")).click();
 				Thread.sleep(1000);
+				js.executeScript("scroll(0, 860)");
 			driver.findElement(By.xpath(Calculators.Kiwisaver_calculator)).click();
 				Thread.sleep(1000);
 			driver.findElement(By.className(Calculators.Open_calc)).click();

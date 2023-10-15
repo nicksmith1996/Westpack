@@ -1,14 +1,14 @@
 package Pages;
 
 public class Fund {
-	public static final String Feild = "/html/body/div[2]/div[2]/div/div/div/main/div[9]/div/div/div/div";
-	public static final String Unsure = "//*[@id=\"menu-\"]/div[3]/ul/li[1]";
-	public static final String Mix = "//*[@id=\"menu-\"]/div[3]/ul/li[2]";
-	public static final String Defensive = "//*[@id=\"menu-\"]/div[3]/ul/li[3]";
-	public static final String Conservative = "//*[@id=\"menu-\"]/div[3]/ul/li[4]";
-	public static final String Moderate = "//*[@id=\"menu-\"]/div[3]/ul/li[5]";
-	public static final String Balanced = "//*[@id=\"menu-\"]/div[3]/ul/li[6]";
-	public static final String Growth = "//*[@id=\"menu-\"]/div[3]/ul/li[7]";
+	public static final String Feild = "\"//div[contains(@aria-labelledby, 'dropdown-QUESTION_CURRENT_FUND')]\";
+	public static final String Unsure = "//li[@data-value='I’m not sure which fund']";
+	public static final String Mix ="//li[@data-value='It’s a mix of funds']";
+	public static final String Defensive = "//li[@data-value='Defensive / Cash']";
+	public static final String Conservative = "//li[@data-value='Conservative']";
+	public static final String Moderate = "//li[@data-value='Moderate']";
+	public static final String Balanced = "//li[@data-value='Balanced / Default']";
+	public static final String Growth = "//li[@data-value='Growth']";
 	
 }
 

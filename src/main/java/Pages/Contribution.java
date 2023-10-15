@@ -1,17 +1,17 @@
 package Pages;
 
 public class Contribution {
-	public static final String Feild = "/html/body/div[2]/div[2]/div/div/div/main/div[8]/div/div/div/div/div";
+	public static final String Feild = "//div[contains(@aria-labelledby, 'dropdown-QUESTION_CONTRIBUTION_PERCENTAGE')]";
 	
-	public static final String Percent_4 = "//*[@id=\"menu-\"]/div[3]/ul/li[3]";
-	
+	public static final String Percent_4 = "//li[@data-value='4%']";
+	s
 	//Frequency
-	public static final String Frequency_feild = "/html/body/div[2]/div[2]/div/div/div/main/div[7]/div/div/div/div/div";
-	public static final String Frequency_Zero = "//*[@id=\"menu-\"]/div[3]/ul/li[1]";
-	public static final String Frequency_Weekly = "//*[@id=\"menu-\"]/div[3]/ul/li[2]";
-	public static final String Frequency_Fortnightly = "//*[@id=\"menu-\"]/div[3]/ul/li[3]";
-	public static final String Frequency_Monthly = "//*[@id=\"menu-\"]/div[3]/ul/li[4]";
-	public static final String Frequency_Anually = "//*[@id=\"menu-\"]/div[3]/ul/li[5]";
+	public static final String Frequency_feild = "//div[text()='per year']";
+	public static final String Frequency_Zero = "//li[@data-value='Employed']";
+	public static final String Frequency_Weekly = "//li[@data-value='per week']";
+	public static final String Frequency_Fortnightly = "//li[@data-value='per fortnight']";
+	public static final String Frequency_Monthly = "//li[@data-value='per month']";
+	public static final String Frequency_Anually = "//li[@data-value='per year']";
 	
 	public static final String Text_Feild = "text-QUESTION_VOLUNTARY_CONTRIBUTION_AMOUNT";
 	

@@ -66,10 +66,12 @@ public static void main(String[] args) throws InterruptedException {
 
 					//User 2
 			driver.get(Home.URL);
-			driver.findElement(By.partialLinkText("Calculators")).click();
-				Thread.sleep(1000);
-				js.executeScript("scroll(0, 860)");
+
 			driver.findElement(By.xpath(Calculators.Kiwisaver_calculator)).click();
+				Thread.sleep(1000);
+			js.executeScript("scroll(0, 860)");
+				Thread.sleep(500);	
+			driver.findElement(By.xpath(Calculators.Check_contr)).click();
 				Thread.sleep(1000);
 			driver.findElement(By.className(Calculators.Open_calc)).click();
 				Thread.sleep(500);
@@ -83,8 +85,8 @@ public static void main(String[] args) throws InterruptedException {
 			driver.findElement(By.id(Balance.Feild)).sendKeys(User2.starting + Keys.ENTER);
 			Thread.sleep(1000);
 		//Controbution period
-			driver.findElement(By.xpath(Contribution.Frequency_feild)).click();
-			driver.findElement(By.xpath(Contribution.Frequency_Fortnightly)).click();
+			driver.findElement(By.xpath(Contribution.Frequency_feild_b)).click();
+			driver.findElement(By.xpath(Contribution.Frequency_Fortnightly_b)).click();
 		//Contribution value
 			driver.findElement(By.id(Contribution.Text_Feild)).sendKeys(User2.contributionDollar + Keys.ENTER);
 			
@@ -95,10 +97,11 @@ public static void main(String[] args) throws InterruptedException {
 					
 				//User 3
 			driver.get(Home.URL);
-			driver.findElement(By.partialLinkText("Calculators")).click();
-				Thread.sleep(1000);
-				js.executeScript("scroll(0, 860)");
 			driver.findElement(By.xpath(Calculators.Kiwisaver_calculator)).click();
+				Thread.sleep(2000);
+			js.executeScript("scroll(0, 860)");
+				Thread.sleep(500);
+			driver.findElement(By.xpath(Calculators.Check_contr)).click();
 				Thread.sleep(1000);
 			driver.findElement(By.className(Calculators.Open_calc)).click();
 				Thread.sleep(500);
@@ -112,8 +115,8 @@ public static void main(String[] args) throws InterruptedException {
 			driver.findElement(By.id("text-QUESTION_KIWISAVER_BALANCE")).sendKeys(User3.starting + Keys.ENTER);
 			Thread.sleep(1000);
 		//Controbution period
-			driver.findElement(By.xpath(Contribution.Frequency_feild)).click();
-			driver.findElement(By.xpath(Contribution.Frequency_Anually)).click();
+			driver.findElement(By.xpath(Contribution.Frequency_feild_b)).click();
+			driver.findElement(By.xpath(Contribution.Frequency_Anually_b)).click();
 		//Contribution value
 			driver.findElement(By.id(Contribution.Text_Feild)).sendKeys(User3.contributionDollar + Keys.ENTER);
 			
